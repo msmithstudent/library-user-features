@@ -14,7 +14,7 @@ class signupContr extends Signup {
 	}
 	
 	public function signupUser() {
-		if ($this->ifEmpty() == False) {
+		if ($this->ifEmpty() == True) {
 			header('Location: ../index.php?error=emptyinput');
 			exit();
 		}
@@ -36,14 +36,20 @@ class signupContr extends Signup {
 		}
 		$this->setUser($this->uid, $this->pwd, $this->cardNumber);
 	}
-	
+
+	public function fetchUserID($uid) {
+		$userID = $this->getUserID($uid);
+		return $userID[0]['UserID'];
+	}
+
+	// Error handlers
 	private function ifEmpty() {
 		$result;
 		if (empty($this->uid) || empty($this->pwd) || empty($this->pwdConfirm) 
 			|| empty($this->cardNumber)) {
-			$result = False;
-		} else {
 			$result = True;
+		} else {
+			$result = False;
 		}
 		return $result;
 	}
@@ -86,11 +92,5 @@ class signupContr extends Signup {
 			$result = True;
 		}
 		return $result;
-	}
-	
-	private function trimInput($input) {
-		$input = trim($input);
-		$input = htmlspecialchars($input);
-		return $input;
 	}
 }

@@ -1,16 +1,12 @@
 <?php
 
-if (isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	
 	//get form data
-	$title = $_POST['title'];
-	$author = $_POST['author'];
-	
-	//instantiate searchContr class
-	include 'classes/dbh.classes.php';
-	include 'classes/search.classes.php';
-	include 'classes/search-contr.classes.php';
-	
-	$search = new searchContr($title, $author);
+	session_start();
+	$_SESSION['Title'] = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
+	$_SESSION['Author'] = htmlspecialchars($_POST['author'], ENT_QUOTES, 'UTF-8');
+
+	header("Location: ../results.php?error=none");
 	
 }

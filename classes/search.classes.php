@@ -24,24 +24,9 @@ class Search extends Dbh {
 			$rowArray = Array($result["Title"], $result["Author"], $result["Year"], $result["Description"], "<img src=" . $result["Cover_Path"] . " height='300' width='200'>");
 			array_push($responseArray, $rowArray);
 		}
+
+		$statement = null;
+
 		return $responseArray;
 	}
-	
-	protected function createResultsTable($responseArray) {
-		$headings = Array("Title", "Author", "Year", "Description", "Cover");
-		echo "<table align='center' cellpadding='2'>";   
-		echo "<tr>";  
-		foreach ( $headings as $heading ) {  
-			echo "<th>$heading</th>";  
-		}  
-		echo "</tr>";
-		foreach ($responseArray as $array) {
-			echo "<tr>";
-			foreach ($array as $row) {
-				echo "<td>$row</td>";
-			}
-			echo "</tr>";
-			}
-		echo "</table>";
-	}	
 }
