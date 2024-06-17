@@ -1,11 +1,30 @@
+:root {
+	--color-accent: #B695C0;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	line-height: 1.5;
 }
 
 .wrapper {
 	width: 900px;
 	margin: 0 auto;
+}
+
+.title {
+	color: #fff;
+}
+
+.link {
+	color: #fff;
 }
 
 p {
@@ -24,7 +43,7 @@ h4 {
 header {
 	width: 100%;
 	height: 80px;
-	background-color: #B695C0;
+	background-color: var(--color-accent);
 }
 
 header nav {

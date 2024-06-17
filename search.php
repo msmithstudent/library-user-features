@@ -6,7 +6,14 @@
 		<input type="text" name="title" placeholder="Title"><br>
 		<input type="text" name="author" placeholder ="Author">
 		<br>
-		<button type="submit" name="submit">SEARCH</button>
+		<button type="submit" name="submit">SEARCH CATALOG</button>
+	</form>
+	<br><br>
+<form action="includes/bookprofile.inc.php" method="post">
+		<input type="text" name="title" placeholder="Title"><br>
+		<input type="text" name="author" placeholder ="Author">
+		<br>
+		<button type="submit" name="submit">SEARCH BOOK REVIEWS</button>
 	</form>
 </body>
 </html>
