@@ -14,17 +14,117 @@
 	line-height: 1.5;
 }
 
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li.navbar {
+  float: left;
+}
+
+li a.navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 8px;
+  text-decoration: none;
+}
+
+li a:hover.navbar {
+  background-color: #A095BF;
+}
+
+ul.member-navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+li.member-navbar {
+  float: left;
+}
+
+li a.member-navbar {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 12px 8px;
+  text-decoration: none;
+}
+
+li a:hover.member-navbar {
+  background-color: #A095BF;
+}
+
 .wrapper {
-	width: 900px;
+	width: 50%;
 	margin: 0 auto;
 }
 
 .title {
+	float: left;
+	display: block;
 	color: #fff;
+	text-align: center;
+	padding: 4px 4px;
+	text-decoration: none;
 }
 
-.link {
-	color: #fff;
+.index-login {
+	display: block;
+	padding: 4px 4px;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+textarea {
+	width: 100%;
+	border: 1px solid var(--color-accent);
+}
+
+button {
+	background-color: var(--color-accent);
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#results {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#results td, #results th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#results tr:hover {background-color: #ddd;}
+
+#results th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: var(--color-accent);
+  color: white;
 }
 
 p {
@@ -36,8 +136,19 @@ p {
 h4 {
 	font-size: 22px;
 	font-family: "Times New Roman", Times, serif;
-	color: #1e1e1e;
+	color: var(--color-accent);
 	line-height: 32px;
+	padding-top: 14px;
+	padding-bottom: 20px;
+}
+
+h3 {
+	font-size: 18px;
+	font-family: "Times New Roman", Times, serif;
+	color: var(--color-accent);
+	line-height: 32px;
+	padding-top: 10px;
+	padding-bottom: 14px;
 }
 
 header {
